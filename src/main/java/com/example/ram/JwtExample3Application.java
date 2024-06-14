@@ -1,4 +1,4 @@
-package com.jwt.example;
+package com.example.ram;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
