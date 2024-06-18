@@ -20,6 +20,11 @@ public class Quizcontro {
     public Quizcontro(QuizService quizService) {
         this.quizService = quizService;
     }
+
+     @Autowired
+    private Quizrepo quizrepo;
+
+    
     @PostMapping("/tquiz")
     public void saveQuizData(@RequestBody Quiz quiz) {
         quizService.saveQuiz(quiz);
