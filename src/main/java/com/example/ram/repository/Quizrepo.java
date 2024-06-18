@@ -2,6 +2,9 @@ package com.example.ram.repository;
 
 import com.example.ram.model.Quiz;
 import org.springframework.data.jpa.repository.JpaRepository;
+import org.springframework.data.jpa.repository.Query;
+import org.springframework.data.repository.query.Param;
+
 
 public interface Quizrepo extends JpaRepository<Quiz,Integer> {
 
