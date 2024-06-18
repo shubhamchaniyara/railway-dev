@@ -53,5 +53,15 @@ public class Quizcontro {
         }
     }
 
+     @GetMapping("/getUserIdByNickname/{gamepin}/{nickname}")
+    public ResponseEntity<Integer> getUserIdByNickname(@PathVariable Long gamepin, @PathVariable String nickname) {
+        Integer userId = quizrepo.findUserIdByGamePinAndNickname(gamepin, nickname);
+        if (userId != null) {
+            return ResponseEntity.ok(userId);
+        } else {
+            return ResponseEntity.status(404).body(null);
+        }
+    }
+
 
 }
